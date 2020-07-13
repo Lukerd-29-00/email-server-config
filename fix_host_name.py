@@ -12,3 +12,13 @@ f = open('dovecot.conf','w')
 txt = txt.replace('studio',name)
 f.write(txt)
 f.close()
+#read the main.cf configuration file from the current working directory.
+f = open('main.cf','r')
+txt = f.read()
+f.close()
+#replace 'studio' with the hostname of the current machine.
+f = open('main.cf','w')
+txt = txt.replace('studio',name)
+f.write(txt)
+f.close()
+
