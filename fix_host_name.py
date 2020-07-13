@@ -1,6 +1,5 @@
 f = open(".host",'r')
-name = f.read()
-print(name)
+name = f.read().strip()
 f.close()
 f = open('main.cf','r')
 txt = f.read()
