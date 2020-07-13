@@ -1,0 +1,5 @@
+Run the command on the line below to create a file named .host containing the host name of the current computer.
+echo "$HOSTNAME" > .host
+now, run 
+python3 fix_host_name
+to modify the dovecot.conf file to replace 'studio' with the actual host name of the box. Move dovecot.conf to /etc/dovecot, and execute 'service dovecot start' to start the dovecot server. It will read the file /etc/dovecot/passwd to look for users and their passwords, in the format USR@hostname:{PLAIN}password.
